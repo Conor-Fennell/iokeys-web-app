@@ -1,6 +1,8 @@
 
 import './App.css';
-import { Button } from 'elemental'
+import { AwesomeButton } from "react-awesome-button";
+
+ 
 
 function App() {
 
@@ -21,9 +23,25 @@ function App() {
           IOKEYS
         </p>
         <>
-        <Button onClick={lockCommand} variant="outline-primary">Lock</Button>
-        <Button onClick={unlockCommand} variant="outline-primary">Unlock</Button>
+
+        <AwesomeButton
+       
+          type="primary"
+          ripple
+          onPress={lockCommand}>
+          LOCK
+        </AwesomeButton>
+       
+        <AwesomeButton
+         
+          type="primary"
+          ripple
+          onPress={unlockCommand}>
+          UNLOCK
+        </AwesomeButton>
+
         </>
+
       </header>
     </div>
   );
