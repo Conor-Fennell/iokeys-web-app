@@ -1,22 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Button } from 'elemental'
 
 function App() {
+
+  const lockCommand = () => {
+    console.log("Clicked lock button")
+  }
+
+  const unlockCommand = () => {
+    console.log("Clicked unlock button")
+  }
+
+  console.log("App is running...")
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          IOKEYS
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <>
+        <Button onClick={lockCommand} variant="outline-primary">Lock</Button>
+        <Button onClick={unlockCommand} variant="outline-primary">Unlock</Button>
+        </>
       </header>
     </div>
   );
